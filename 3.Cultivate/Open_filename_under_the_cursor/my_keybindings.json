@@ -1,0 +1,7 @@
+[
+    {
+        "key": "g f",
+        "command": "seito-openfile.openFileFromText",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    }
+]

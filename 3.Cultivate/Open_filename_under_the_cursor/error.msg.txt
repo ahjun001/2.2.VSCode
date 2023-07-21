@@ -1,0 +1,7 @@
+
+Cannot source a directory: "/usr/lib/nvim"
+E282: Cannot read from "/usr/lib/nvim"
+Error detected while processing function <SNR>6_vscodeGoToDefinition:
+line    5:
+E433: No tags file
+E426: tag not found: link1

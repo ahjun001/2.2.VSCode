@@ -1,0 +1,7 @@
+These are link1.txt contents.
+
+./test.txt or also:
+
+~/Documents/newGithub/2.2.VSCode/3.Cultivate/Open_filename_under_the_cursor/test.txt
+
+./link2.txt

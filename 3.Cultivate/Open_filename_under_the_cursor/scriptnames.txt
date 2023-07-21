@@ -1,0 +1,14 @@
+ 1: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-neovim.vim
+  2: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vim-altercmd/plugin/altercmd.vim
+  3: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-insert.vim
+  4: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-scrolling.vim
+  5: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-jumplist.vim
+  6: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-code-actions.vim
+  7: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-file-commands.vim
+  8: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vim-altercmd/autoload/altercmd.vim
+  9: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-tab-commands.vim
+ 10: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-window-commands.vim
+ 11: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/vim/vscode-motion.vim
+ 12: /usr/share/nvim/runtime/ftplugin.vim
+ 
+ 32: ~/.vscode/extensions/asvetliakov.vscode-neovim-0.3.2/runtime/lua/options.lua

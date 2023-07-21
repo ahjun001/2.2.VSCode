@@ -1,0 +1,78 @@
+{
+	"shellCheck boilerplate": {
+		"prefix": ",sc boilerplate",
+		"body": [
+			"# shellcheck disable=SC2148,SC2215",
+			"",
+			"ExampleGroup 'EGroup1' # Context / Describe / ExampleGroup",
+			"    Example 'Ex1'      # It / Specify / Example",
+			"        add() { echo \"\\$1 + \\$2\" | bc; }",
+			"        When call add 10 1",
+			"        The output should eq 11",
+			"        The status should be success",
+			"    End",
+			"End",
+			""
+		],
+		"description": "Inserts a dummy ExampleGroup & Example"
+	},
+	"shellCheck disable some commands ": {
+		"prefix": ",sc disable command",
+		"body": [
+			"# shellcheck disable=SC2148,SC2215"
+		],
+		"description": "Insert the command line to disable comments"
+	},
+	"bash example": {
+		"prefix": ",bash example",
+		"body": [
+			"#!/usr/bin/env bash",
+			"",
+			"testDir=/tmp/test",
+			"rm -rf \\${testDir}",
+			"mkdir -p \\${testDir}",
+			"testFile=\\${testDir}/test.txt",
+			""
+		]
+	},
+	",bash usage script with short & long arguments": {
+		"prefix": ",short, long args & usage",
+		"body": [
+			"#!/usr/bin/env bash",
+			"",
+			"usage() {",
+			"    echo \"Usage: \\$0 [-a, --alpha] [-b, --beta VALUE]\"",
+			"}",
+			"",
+			"if [[ ! $* =~ ^\\-.+ ]]; then",
+			"    usage",
+			"    exit",
+			"fi",
+			"",
+			"if ! VALID_ARGS=$(getopt -o ab: --long alpha,beta: -- \"$@\"); then exit 1; fi",
+			"",
+			"eval set -- \"\\$VALID_ARGS\"",
+			"",
+			"while 'true'; do",
+			"    case \"\\$1\" in",
+			"    -a | --alpha)",
+			"        echo \"Processing 'alpha' option\"",
+			"        shift",
+			"        ;;",
+			"",
+			"    -b | --beta)",
+			"        echo \"Processing 'beta' option. Input argument is '\\$2'\"",
+			"        shift 2",
+			"        ;;",
+			"",
+			"    --)",
+			"        shift",
+			"        break",
+			"        ;;",
+			"    esac",
+			"done",
+			""
+		],
+		"description": "First lines for a script to exit if no arg is passed, and then parse -a --alpha -b value --beta value, or print usage & exit"
+	},
+}

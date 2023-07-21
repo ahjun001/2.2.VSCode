@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "shellspec ",
+            "type": "shell",
+            "command": "shellspec ${relativeFile}",
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "shellspec with trace ",
+            "type": "shell",
+            "command": "shellspec -x ${relativeFile}",
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "shellspec failure",
+            "type": "shell",
+            "command": "shellspec -f failures ${relativeFile}",
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+    ]
+}
