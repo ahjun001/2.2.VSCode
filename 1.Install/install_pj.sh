@@ -6,7 +6,7 @@ set -euo pipefail
 . ~/Documents/Github/2.1.Linux/1.Install/01_set_env_variables.sh
 
 # Exit if program is already installed
-PROGRAM="{PROGRAM:?}"
+PROGRAM=code
 if command -v "$PROGRAM" >/dev/null; then
     $DBG "$0" "$PROGRAM" is already installed
     [[ "$0" == "${BASH_SOURCE[0]}" ]] && exit 0 || return 0
@@ -27,8 +27,5 @@ linuxmint | ubuntu)
     exit 1
     ;;
 esac
-
-LINKS="${0#/*}"/links_pj.sh
-[[ -f $LINKS ]] && $LINKS
 
 $RUN "$PROGRAM"

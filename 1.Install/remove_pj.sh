@@ -6,7 +6,7 @@ set -euo pipefail
 . ~/Documents/Github/2.1.Linux/1.Install/01_set_env_variables.sh
 
 # Exit if program is already installed
-PROGRAM="${PROGRAM:?}"
+PROGRAM=code
 if ! command -v "$PROGRAM" >/dev/null; then
     $DBG "$0" "$PROGRAM" is already uninstalled
     [[ "$0" == "${BASH_SOURCE[0]}" ]] && exit 0 || return 0
@@ -22,14 +22,12 @@ linuxmint | ubuntu)
     [[ "$0" == "${BASH_SOURCE[0]}" ]] && exit 0 || return 0
 
     # if needed, check with claude.ai for further details
-    rm -r ~/.config/Code/ # remove configuration files
-    rm -r ~/.vscode/      # remove VSCode extensions and other cached data
-    rm ~/.local/share/applications/code.desktop
-    sudo rm /usr/share/applications/code.desktop
-    sudo rm /usr/share/pixmaps/code.png # remove desktop and menu shortcuts
-    sudo add-apt-repository --remove \
-        "deb [arch=amd64] https://packages.microsoft.com/repos/vscode  \
-        stable main" # remove the apt repository
+    rm -fr ~/.config/Code/ # remove configuration files
+    rm -fr ~/.vscode/      # remove VSCode extensions and other cached data
+    rm -f ~/.local/share/applications/code.desktop
+    sudo rm -f /usr/share/applications/code.desktop
+    sudo rm -f /usr/share/pixmaps/code.png                            # remove desktop and menu shortcuts
+    sudo rm -f /etc/apt/sources.list.d/vscode.list && sudo apt update # remove the apt repository
     ;;
 *)
     echo "Distribution $ID not recognized, exiting ..."
