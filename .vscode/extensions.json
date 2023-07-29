@@ -4,6 +4,7 @@
         "fr43nk.seito-openfile",
         "eamodio.gitlens",
         "foxundermoon.shell-format",
-        "formulahendry.code-runner"
+        "formulahendry.code-runner",
+        "timonwong.shellcheck"
     ]
 }
